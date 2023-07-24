@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1 class="text-white animated fadeIn">Share Ride</h1>
+	<br>
+	<hr color="white">
+	<div class="jumbotron animated fadeInUp">
+		<p class="lead">
+			Provide the given details to Share your ride.
+		</p>
+		<div class="row">
+			<div class="card-body text-primary">
+				<form action="" method="POST">
+					<div class="form-group">
+						<h4> Enter From Location</h4>
+						<input type="text" name="fromLocation" placeholder="From" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<h4> Enter To Location </h4>
+						<input type="text" name="toLocation" placeholder="To" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<h4>Enter Your City</h4>
+						<input type="text" name="city" placeholder="City" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<h4> Enter Fare </h4>
+						<input type="text" name="fare" placeholder="Fare" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<h4> Enter Date </h4>
+						
+						<!--     <label for="date">Date</label>                             -->
+						
+						<input type="date" id="date" name="rideDate" placeholder="Date and Time" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<h4> Enter Time </h4>
+						<!--         <label for="time"></label>                     -->
+						<input type="time" id="time" name="rideTime" placeholder="Date and Time" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<h4> Enter available Seats </h4>
+						<input type="text" name="seats" placeholder="Seats Available" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<h4> Enter Your Car Condition </h4>
+						<input type="text" name="carstatus" placeholder="how is your car status?" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<h4> Enter any message for passenger </h4>
+						<input type="text" name="message" placeholder="any message for passenger?" class="form-control" required>
+					</div>
+					<br>
+					<p class="text-center">
+						<button type="submit" class="btn btn-primary">Share Ride</button>
+					</p>
+				</form>
+			</div>
+		</div>
+<!--
+		<div class="imp">
+			<img src="static/img/near.jpg" width="100%" alt="hotel photo" />
+		</div>
+
+	-->
+	</div>
+</center>
+{% endblock %}

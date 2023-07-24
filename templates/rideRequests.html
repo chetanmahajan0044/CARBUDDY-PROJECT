@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<h1 class="text-white animated fadeIn">Ride Requests</h1>
+	<br>
+	<hr color="white">
+	<p class="text-white lead">
+		All the Requests for joining your ride
+	</p>
+	<hr color="white">
+	<div class="row">
+		{% for rideRequest in rideRequests %}
+			<div class="col-lg-4 animated fadeInUp">
+				<div class="card border-primary mb-3">
+					<div class="card-header">On <b>{{ rideRequest[5] }}</b> at <b>{{ rideRequest[6] }}</b></div>
+					<div class="card-body text-primary">
+						<h4 class="card-title">{{ rideRequest[8] }}&nbsp;to&nbsp;{{ rideRequest[9] }}</h4>
+						<p class="card-text">
+							<p>
+								<b>Fare :</b> {{ rideRequest[12] }}
+								<br>
+								<b>Gender :</b> {{ rideRequest[18] }}
+								<br>
+								<b>Contact No :</b> {{ rideRequest[21] }}
+							</p>
+							<form action="" method="POST" class="text-center">
+								<input type="hidden" value="{{ rideRequest[1] }}" name="rideId">
+								<button class="btn btn-primary" type="submit">Accept Request</button>
+							</form>
+						</p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
